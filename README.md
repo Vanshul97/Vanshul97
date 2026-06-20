@@ -56,7 +56,7 @@ CURRENTLY="OTel Collector reliability | Row-level access control | Cost-optimize
 ## `> htop`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Vanshul97&show_icons=true&theme=merko&hide_border=true&count_private=true&bg_color=0d1117&title_color=30A758&icon_color=30A758&text_color=c9d1d9" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Vanshul97&show_icons=true&theme=merko&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=30A758&icon_color=30A758&text_color=c9d1d9" width="48%" />
   <img src="https://github-readme-streak-stats.herokuapp.com?user=Vanshul97&theme=merko&hide_border=true&background=0D1117&ring=30A758&fire=30A758&currStreakLabel=30A758" width="48%" />
 </p>
 
@@ -77,7 +77,7 @@ CURRENTLY="OTel Collector reliability | Row-level access control | Cost-optimize
 ## `> netstat -connections`
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/vanshulsuneja/"><img src="https://img.shields.io/badge/-%24+ssh+linkedin-0D1117?style=flat-square&logo=linkedin&logoColor=30A758" /></a>
+  <a href="https://linkedin.com/in/vanshulsuneja"><img src="https://img.shields.io/badge/-%24+ssh+linkedin-0D1117?style=flat-square&logo=linkedin&logoColor=30A758" /></a>
   <a href="https://github.com/open-telemetry/opentelemetry-collector"><img src="https://img.shields.io/badge/-%24+cd+otel--collector-0D1117?style=flat-square&logo=opentelemetry&logoColor=30A758" /></a>
   <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib"><img src="https://img.shields.io/badge/-%24+cd+otel--contrib-0D1117?style=flat-square&logo=opentelemetry&logoColor=30A758" /></a>
 </p>
