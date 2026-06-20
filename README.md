@@ -77,7 +77,7 @@ CURRENTLY="OTel Collector reliability | Row-level access control | Cost-optimize
 ## `> netstat -connections`
 
 <p align="center">
-  <a href="https://linkedin.com/in/vanshulsuneja"><img src="https://img.shields.io/badge/-%24+ssh+linkedin-0D1117?style=flat-square&logo=linkedin&logoColor=30A758" /></a>
+  <a href="https://www.linkedin.com/in/vanshul-suneja/"><img src="https://img.shields.io/badge/-%24+ssh+linkedin-0D1117?style=flat-square&logo=linkedin&logoColor=30A758" /></a>
   <a href="https://github.com/open-telemetry/opentelemetry-collector"><img src="https://img.shields.io/badge/-%24+cd+otel--collector-0D1117?style=flat-square&logo=opentelemetry&logoColor=30A758" /></a>
   <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib"><img src="https://img.shields.io/badge/-%24+cd+otel--contrib-0D1117?style=flat-square&logo=opentelemetry&logoColor=30A758" /></a>
 </p>
