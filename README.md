@@ -7,14 +7,15 @@
    ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
 ```
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=1000&color=30A758&background=0D111700&vCenter=true&width=600&lines=%24+whoami;platform+engineer+%7C+observability+%7C+open+source;%24+cat+%2Fetc%2Fmission;make+telemetry+pipelines+indestructible)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=1000&color=30A758&background=0D111700&vCenter=true&width=700&lines=%24+whoami;platform+engineer+%7C+devops+%7C+sre+%7C+open+source;%24+cat+%2Fetc%2Fmission;make+telemetry+pipelines+indestructible)](https://git.io/typing-svg)
 
 ---
 
 ## `> cat /proc/status`
 
 ```diff
-+ Platform Engineer building observability infrastructure at scale
++ Platform Engineer | DevOps | SRE | Open Source Contributor
++ Building observability, security, and cost-optimized infrastructure at scale
 + Active contributor to OpenTelemetry Collector (CNCF Graduated)
 + Shipping billions of log rows through OTel → ClickHouse → Grafana
 ```
@@ -41,10 +42,13 @@ d4e7b9c fix: PostgreSQL storage SQL syntax error with hyphens
 
 ```bash
 OBSERVABILITY="OpenTelemetry | Prometheus | Grafana | ClickHouse | Datadog"
+SECURITY="IAM | LakeFormation RBAC | OPA/Rego | Data Cell Filters"
 CLOUD="AWS (S3, CloudWatch, EKS, IAM, LakeFormation) | Kubernetes | Terraform"
+COMPUTE="EKS | Karpenter | Spot Optimization | Right-sizing"
+COST="FinOps | Resource tagging | Idle detection | Reserved capacity"
 LANGUAGES="Go | Java | Python | HCL"
 INFRA="ArgoCD | Helm | Docker | Kafka"
-CURRENTLY="OTel Collector reliability | Row-level access on data lakes | IaC at scale"
+CURRENTLY="OTel Collector reliability | Row-level access control | Cost-optimized compute"
 ```
 
 ---
