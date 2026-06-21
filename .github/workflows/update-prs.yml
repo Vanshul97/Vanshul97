@@ -1,0 +1,59 @@
+name: Update Merged PRs
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch merged PRs and update README
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Fetch merged PRs from both repos
+          CONTRIB_PRS=$(gh pr list --author Vanshul97 --repo open-telemetry/opentelemetry-collector-contrib --state merged --json number,title --limit 50)
+          CORE_PRS=$(gh pr list --author Vanshul97 --repo open-telemetry/opentelemetry-collector --state merged --json number,title --limit 50)
+
+          # Build the table
+          TABLE="| | PR | Repository |\n|---|---|---|"
+
+          # Add contrib PRs (code fixes first)
+          echo "$CONTRIB_PRS" | jq -r '.[] | "\(.number)\t\(.title)"' | while IFS=$'\t' read -r num title; do
+            clean_title=$(echo "$title" | sed 's/\[.*\] //')
+            if echo "$title" | grep -qiE "^\\[(fix|feat|bug)"; then
+              icon="🔧"
+            else
+              icon="📝"
+            fi
+            TABLE="$TABLE\n| $icon | [$clean_title](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/$num) | collector-contrib |"
+          done
+
+          # Add core PRs
+          echo "$CORE_PRS" | jq -r '.[] | "\(.number)\t\(.title)"' | while IFS=$'\t' read -r num title; do
+            clean_title=$(echo "$title" | sed 's/\[.*\] //')
+            if echo "$title" | grep -qiE "^\\[(pdata|fix|feat|bug)"; then
+              icon="🔧"
+            else
+              icon="📝"
+            fi
+            TABLE="$TABLE\n| $icon | [$clean_title](https://github.com/open-telemetry/opentelemetry-collector/pull/$num) | collector-core |"
+          done
+
+          # Replace content between markers
+          printf "%b" "$TABLE" > /tmp/pr_table.md
+          sed -i '/<!-- START_MERGED_PRS -->/,/<!-- END_MERGED_PRS -->/{//!d}' README.md
+          sed -i "/<!-- START_MERGED_PRS -->/r /tmp/pr_table.md" README.md
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet || (git add README.md && git commit -m "chore: auto-update merged PRs" && git push)

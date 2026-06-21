@@ -24,17 +24,18 @@
 
 ## `> git log --oneline --author=vanshul (open source)`
 
-```
-f4a2c1b fix: batch splitter data loss when items exceed max batch size
-a8e3d9f fix: Value.AsString() NaN/Infinity representation per OTel spec
-c7b1e4a feat: RFC 9110 identity Content-Encoding support
-3d9f2b8 fix: ClickHouse exporter connecting to wrong database
-e1c4a7d fix: Azure Monitor swapping client/server attributes
-b5f8c3e fix: Substring corrupting multibyte UTF-8 (CJK, emoji)
-9a2d6f1 fix: remove log.Fatalf in AWS Cloud Map resolver
-d4e7b9c fix: PostgreSQL storage SQL syntax error with hyphens
-7f3a1e5 fix: telemetrygen --allow-export-failures ignored in batch
-```
+<!-- START_MERGED_PRS -->
+| | PR | Repository |
+|---|---|---|
+| 🔧 | [Fix --allow-export-failures ignored in batch mode](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48764) | collector-contrib |
+| 🔧 | [Clean up stale unix socket on startup](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48761) | collector-contrib |
+| 🔧 | [Add COMMENT clauses to logs and traces schema columns](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48036) | collector-contrib |
+| 📝 | [Document native histogram support](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/47733) | collector-contrib |
+| 🔧 | [Use spec-compliant string representation for NaN and Infinity](https://github.com/open-telemetry/opentelemetry-collector/pull/15138) | collector-core |
+| 📝 | [Clarify error_output_paths only affects zap internal errors](https://github.com/open-telemetry/opentelemetry-collector/pull/15147) | collector-core |
+| 📝 | [Clarify TLS docs: mTLS is optional, not mandatory](https://github.com/open-telemetry/opentelemetry-collector/pull/15143) | collector-core |
+| 📝 | [Update docs to recommend declarative metadata.yaml definitions](https://github.com/open-telemetry/opentelemetry-collector/pull/15133) | collector-core |
+<!-- END_MERGED_PRS -->
 
 ---
 
