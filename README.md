@@ -41,6 +41,18 @@
 
 ---
 
+## `> uptime`
+
+```diff
+@@ load average: observability, reliability, cost @@
++ 7,000,000+  Grafana-catalog errors eliminated  (backoff + graceful disable)
++ 4,795       entities synced per cycle — now backpressure-safe, no data loss
++ billions/day  log rows shipped through OTel → ClickHouse → Grafana
++ 10          PRs merged across CNCF OpenTelemetry Collector + Contrib
+```
+
+---
+
 ## `> cat /etc/stack.conf`
 
 ```bash
@@ -53,6 +65,32 @@ LANGUAGES="Go | Java | Python | HCL"
 INFRA="ArgoCD | Helm | Docker | Kafka"
 CURRENTLY="OTel Collector reliability | Row-level access control | Cost-optimized compute"
 ```
+
+---
+
+## `> systemctl status`
+
+<p align="center">
+  <img src="https://img.shields.io/badge/opentelemetry.service-active%20(running)-30A758?style=flat-square&labelColor=0D1117&logo=opentelemetry&logoColor=30A758" />
+  <img src="https://img.shields.io/badge/prometheus.service-active%20(running)-30A758?style=flat-square&labelColor=0D1117&logo=prometheus&logoColor=30A758" />
+  <img src="https://img.shields.io/badge/grafana.service-active%20(running)-30A758?style=flat-square&labelColor=0D1117&logo=grafana&logoColor=30A758" />
+  <img src="https://img.shields.io/badge/clickhouse.service-active%20(running)-30A758?style=flat-square&labelColor=0D1117&logo=clickhouse&logoColor=30A758" />
+  <img src="https://img.shields.io/badge/kubernetes.service-active%20(running)-30A758?style=flat-square&labelColor=0D1117&logo=kubernetes&logoColor=30A758" />
+  <img src="https://img.shields.io/badge/terraform.service-active%20(running)-30A758?style=flat-square&labelColor=0D1117&logo=terraform&logoColor=30A758" />
+  <img src="https://img.shields.io/badge/argocd.service-active%20(running)-30A758?style=flat-square&labelColor=0D1117&logo=argo&logoColor=30A758" />
+</p>
+
+---
+
+## `> ps aux --sort=lang`
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Go-0D1117?style=flat-square&logo=go&logoColor=30A758" />
+  <img src="https://img.shields.io/badge/Java-0D1117?style=flat-square&logo=openjdk&logoColor=30A758" />
+  <img src="https://img.shields.io/badge/Python-0D1117?style=flat-square&logo=python&logoColor=30A758" />
+  <img src="https://img.shields.io/badge/HCL-0D1117?style=flat-square&logo=terraform&logoColor=30A758" />
+  <img src="https://img.shields.io/badge/Bash-0D1117?style=flat-square&logo=gnubash&logoColor=30A758" />
+</p>
 
 ---
 
