@@ -27,16 +27,16 @@
 <!-- START_MERGED_PRS -->
 | | PR | Repository |
 |---|---|---|
-| 📝 | [Fix --allow-export-failures ignored in batch mode](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48764) | collector-contrib |
-| 📝 | [Clean up stale unix socket on startup](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48761) | collector-contrib |
-| 📝 | [Respect configured database when create_schema is false](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48050) | collector-contrib |
+| 🔧 | [Use spec-compliant string representation for NaN and Infinity](https://github.com/open-telemetry/opentelemetry-collector/pull/15138) | collector-core |
+| 🔧 | [Respect configured database when create_schema is false](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48050) | collector-contrib |
+| 🔧 | [fix: gracefully disable when grafanaCloudCatalogInfo config is absent](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/160) | grafana-catalog |
+| 🔧 | [Clean up stale unix socket on startup](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48761) | collector-contrib |
+| 🔧 | [Fix --allow-export-failures ignored in batch mode](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48764) | collector-contrib |
 | 📝 | [Add COMMENT clauses to logs and traces schema columns](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48036) | collector-contrib |
 | 📝 | [Document native histogram support](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/47733) | collector-contrib |
 | 📝 | [Clarify error_output_paths only affects zap internal errors](https://github.com/open-telemetry/opentelemetry-collector/pull/15147) | collector-core |
 | 📝 | [Clarify TLS docs: mTLS is optional, not mandatory](https://github.com/open-telemetry/opentelemetry-collector/pull/15143) | collector-core |
-| 🔧 | [Use spec-compliant string representation for NaN and Infinity](https://github.com/open-telemetry/opentelemetry-collector/pull/15138) | collector-core |
 | 🔧 | [Update docs to recommend declarative metadata.yaml definitions](https://github.com/open-telemetry/opentelemetry-collector/pull/15133) | collector-core |
-| 📝 | [fix: gracefully disable when grafanaCloudCatalogInfo config is absent](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/160) | grafana-catalog |
 <!-- END_MERGED_PRS -->
 
 ---

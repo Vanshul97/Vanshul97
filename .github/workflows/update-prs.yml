@@ -20,25 +20,50 @@ jobs:
         run: |
           set -euo pipefail
 
-          # Emit table rows for one repo. Uses process substitution (no subshell)
-          # so nothing is lost; jq builds each Markdown row directly.
-          rows() {
-            repo="$1"; label="$2"
-            gh pr list --author Vanshul97 --repo "$repo" --state merged \
+          # Curated influence order. One entry per line: "owner/repo#num|icon".
+          # Position = rank (top line ranks highest). PRs not listed here are
+          # appended after, newest-first, with an auto-detected icon.
+          PRIORITY='open-telemetry/opentelemetry-collector#15138|🔧
+          open-telemetry/opentelemetry-collector-contrib#48050|🔧
+          grafana/backstage-plugin-grafana-catalog#160|🔧
+          open-telemetry/opentelemetry-collector-contrib#48761|🔧
+          open-telemetry/opentelemetry-collector-contrib#48764|🔧'
+          # strip the YAML indentation from each PRIORITY line
+          PRIORITY=$(printf '%s\n' "$PRIORITY" | sed 's/^ *//')
+
+          # Emit "num<TAB>autoicon<TAB>cleantitle<TAB>repo<TAB>label" for a repo.
+          fetch() {
+            gh pr list --author Vanshul97 --repo "$1" --state merged \
               --json number,title --limit 50 \
-              | jq -r --arg repo "$repo" --arg label "$label" '
+              | jq -r --arg repo "$1" --arg label "$2" '
                   .[]
                   | (if (.title | test("^\\[(pdata|fix|feat|bug)"; "i")) then "🔧" else "📝" end) as $icon
-                  | (.title | gsub("^\\[[^\\]]*\\] "; "")) as $t
-                  | "| \($icon) | [\($t)](https://github.com/\($repo)/pull/\(.number)) | \($label) |"'
+                  | "\(.number)\t\($icon)\t\(.title | gsub("^\\[[^\\]]*\\] "; ""))\t\($repo)\t\($label)"'
+          }
+
+          # Prefix each row with a numeric rank from PRIORITY (override icon too).
+          rank_rows() {
+            while IFS=$'\t' read -r num icon title repo label; do
+              hit=$(printf '%s\n' "$PRIORITY" | grep -n "^$repo#$num|" || true)
+              if [ -n "$hit" ]; then
+                r=$(printf '%s' "$hit" | head -1 | cut -d: -f1)
+                icon=$(printf '%s' "$hit" | head -1 | cut -d'|' -f2)
+              else
+                r=$((100000 - num))   # unlisted: newer PRs (higher #) sort earlier
+              fi
+              printf '%06d\t| %s | [%s](https://github.com/%s/pull/%s) | %s |\n' \
+                "$r" "$icon" "$title" "$repo" "$num" "$label"
+            done
           }
 
           {
             echo "| | PR | Repository |"
             echo "|---|---|---|"
-            rows open-telemetry/opentelemetry-collector-contrib collector-contrib
-            rows open-telemetry/opentelemetry-collector          collector-core
-            rows grafana/backstage-plugin-grafana-catalog        grafana-catalog
+            {
+              fetch open-telemetry/opentelemetry-collector-contrib collector-contrib
+              fetch open-telemetry/opentelemetry-collector          collector-core
+              fetch grafana/backstage-plugin-grafana-catalog        grafana-catalog
+            } | rank_rows | sort -t"$(printf '\t')" -k1,1n | cut -f2-
           } > /tmp/pr_table.md
 
           # Rewrite the block between the markers. Emits clean marker lines so a
