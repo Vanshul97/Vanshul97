@@ -18,6 +18,7 @@
 + Building observability, security, and cost-optimized infrastructure at scale
 + Active contributor to OpenTelemetry Collector (CNCF Graduated)
 + Shipping billions of log rows through OTel → ClickHouse → Grafana
++ Built an S3 log data lake (Athena + Lake Formation) with row-level access control for long-term retention
 ```
 
 ---
