@@ -18,39 +18,41 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Fetch merged PRs from both repos
-          CONTRIB_PRS=$(gh pr list --author Vanshul97 --repo open-telemetry/opentelemetry-collector-contrib --state merged --json number,title --limit 50)
-          CORE_PRS=$(gh pr list --author Vanshul97 --repo open-telemetry/opentelemetry-collector --state merged --json number,title --limit 50)
+          set -euo pipefail
 
-          # Build the table
-          TABLE="| | PR | Repository |\n|---|---|---|"
+          # Emit table rows for one repo. Uses process substitution (no subshell)
+          # so nothing is lost; jq builds each Markdown row directly.
+          rows() {
+            repo="$1"; label="$2"
+            gh pr list --author Vanshul97 --repo "$repo" --state merged \
+              --json number,title --limit 50 \
+              | jq -r --arg repo "$repo" --arg label "$label" '
+                  .[]
+                  | (if (.title | test("^\\[(pdata|fix|feat|bug)"; "i")) then "🔧" else "📝" end) as $icon
+                  | (.title | gsub("^\\[[^\\]]*\\] "; "")) as $t
+                  | "| \($icon) | [\($t)](https://github.com/\($repo)/pull/\(.number)) | \($label) |"'
+          }
 
-          # Add contrib PRs (code fixes first)
-          echo "$CONTRIB_PRS" | jq -r '.[] | "\(.number)\t\(.title)"' | while IFS=$'\t' read -r num title; do
-            clean_title=$(echo "$title" | sed 's/\[.*\] //')
-            if echo "$title" | grep -qiE "^\\[(fix|feat|bug)"; then
-              icon="🔧"
-            else
-              icon="📝"
-            fi
-            TABLE="$TABLE\n| $icon | [$clean_title](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/$num) | collector-contrib |"
-          done
+          {
+            echo "| | PR | Repository |"
+            echo "|---|---|---|"
+            rows open-telemetry/opentelemetry-collector-contrib collector-contrib
+            rows open-telemetry/opentelemetry-collector          collector-core
+            rows grafana/backstage-plugin-grafana-catalog        grafana-catalog
+          } > /tmp/pr_table.md
 
-          # Add core PRs
-          echo "$CORE_PRS" | jq -r '.[] | "\(.number)\t\(.title)"' | while IFS=$'\t' read -r num title; do
-            clean_title=$(echo "$title" | sed 's/\[.*\] //')
-            if echo "$title" | grep -qiE "^\\[(pdata|fix|feat|bug)"; then
-              icon="🔧"
-            else
-              icon="📝"
-            fi
-            TABLE="$TABLE\n| $icon | [$clean_title](https://github.com/open-telemetry/opentelemetry-collector/pull/$num) | collector-core |"
-          done
-
-          # Replace content between markers
-          printf "%b" "$TABLE" > /tmp/pr_table.md
-          sed -i '/<!-- START_MERGED_PRS -->/,/<!-- END_MERGED_PRS -->/{//!d}' README.md
-          sed -i "/<!-- START_MERGED_PRS -->/r /tmp/pr_table.md" README.md
+          # Rewrite the block between the markers. Emits clean marker lines so a
+          # previously glued END marker can't corrupt the output.
+          awk '
+            /<!-- START_MERGED_PRS -->/ {
+              print "<!-- START_MERGED_PRS -->"
+              while ((getline line < "/tmp/pr_table.md") > 0) print line
+              skip = 1
+              next
+            }
+            /<!-- END_MERGED_PRS -->/ { print "<!-- END_MERGED_PRS -->"; skip = 0; next }
+            !skip { print }
+          ' README.md > README.tmp && mv README.tmp README.md
 
       - name: Commit and push if changed
         run: |
