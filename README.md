@@ -39,6 +39,9 @@
 | 📝 | [Clarify error_output_paths only affects zap internal errors](https://github.com/open-telemetry/opentelemetry-collector/pull/15147) | collector-core |
 | 📝 | [Clarify TLS docs: mTLS is optional, not mandatory](https://github.com/open-telemetry/opentelemetry-collector/pull/15143) | collector-core |
 | 🔧 | [Update docs to recommend declarative metadata.yaml definitions](https://github.com/open-telemetry/opentelemetry-collector/pull/15133) | collector-core |
+| 📝 | [feat: report the upload queue depth and wait time](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/213) | grafana-catalog |
+| 📝 | [fix: retry rate limited ServiceModel requests](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/212) | grafana-catalog |
+| 📝 | [fix: stop logging the GCOM response body](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/211) | grafana-catalog |
 <!-- END_MERGED_PRS -->
 
 ---
