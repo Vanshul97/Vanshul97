@@ -31,17 +31,18 @@
 | 🔧 | [Use spec-compliant string representation for NaN and Infinity](https://github.com/open-telemetry/opentelemetry-collector/pull/15138) | collector-core |
 | 🔧 | [Respect configured database when create_schema is false](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48050) | collector-contrib |
 | 🔧 | [fix: gracefully disable when grafanaCloudCatalogInfo config is absent](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/160) | grafana-catalog |
+| 🔧 | [fix: back off when the connection is lost mid-run](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/210) | grafana-catalog |
+| 🔧 | [fix: retry rate limited ServiceModel requests](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/212) | grafana-catalog |
+| 🔧 | [fix: stop logging the GCOM response body](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/211) | grafana-catalog |
 | 🔧 | [Clean up stale unix socket on startup](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48761) | collector-contrib |
 | 🔧 | [Fix --allow-export-failures ignored in batch mode](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48764) | collector-contrib |
+| 🔧 | [feat: report the upload queue depth and wait time](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/213) | grafana-catalog |
 | 📝 | [[chore][receiver/fluentforward] Fix incorrect tag attribute key in README](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48911) | collector-contrib |
 | 📝 | [Add COMMENT clauses to logs and traces schema columns](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48036) | collector-contrib |
 | 📝 | [Document native histogram support](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/47733) | collector-contrib |
 | 📝 | [Clarify error_output_paths only affects zap internal errors](https://github.com/open-telemetry/opentelemetry-collector/pull/15147) | collector-core |
 | 📝 | [Clarify TLS docs: mTLS is optional, not mandatory](https://github.com/open-telemetry/opentelemetry-collector/pull/15143) | collector-core |
 | 🔧 | [Update docs to recommend declarative metadata.yaml definitions](https://github.com/open-telemetry/opentelemetry-collector/pull/15133) | collector-core |
-| 📝 | [feat: report the upload queue depth and wait time](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/213) | grafana-catalog |
-| 📝 | [fix: retry rate limited ServiceModel requests](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/212) | grafana-catalog |
-| 📝 | [fix: stop logging the GCOM response body](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/211) | grafana-catalog |
 <!-- END_MERGED_PRS -->
 
 ---
