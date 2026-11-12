@@ -53,7 +53,7 @@
 + 7,000,000+  Grafana-catalog errors eliminated  (backoff + graceful disable)
 + 4,795       entities synced per cycle — now backpressure-safe, no data loss
 + billions/day  log rows shipped through OTel → ClickHouse → Grafana
-+ 10          PRs merged across CNCF OpenTelemetry Collector + Contrib
++ 15          PRs merged across OpenTelemetry Collector, Contrib + Grafana Catalog
 ```
 
 ---

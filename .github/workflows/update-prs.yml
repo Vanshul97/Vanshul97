@@ -26,8 +26,12 @@ jobs:
           PRIORITY='open-telemetry/opentelemetry-collector#15138|🔧
           open-telemetry/opentelemetry-collector-contrib#48050|🔧
           grafana/backstage-plugin-grafana-catalog#160|🔧
+          grafana/backstage-plugin-grafana-catalog#210|🔧
+          grafana/backstage-plugin-grafana-catalog#212|🔧
+          grafana/backstage-plugin-grafana-catalog#211|🔧
           open-telemetry/opentelemetry-collector-contrib#48761|🔧
-          open-telemetry/opentelemetry-collector-contrib#48764|🔧'
+          open-telemetry/opentelemetry-collector-contrib#48764|🔧
+          grafana/backstage-plugin-grafana-catalog#213|🔧'
           # strip the YAML indentation from each PRIORITY line
           PRIORITY=$(printf '%s\n' "$PRIORITY" | sed 's/^ *//')
 
