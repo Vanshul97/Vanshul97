@@ -37,6 +37,7 @@
 | 🔧 | [Clean up stale unix socket on startup](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48761) | collector-contrib |
 | 🔧 | [Fix --allow-export-failures ignored in batch mode](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48764) | collector-contrib |
 | 🔧 | [feat: report the upload queue depth and wait time](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/213) | grafana-catalog |
+| 📝 | [Drop WAL batches rejected by the endpoint when retries are enabled](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/53062) | collector-contrib |
 | 📝 | [[chore][receiver/fluentforward] Fix incorrect tag attribute key in README](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48911) | collector-contrib |
 | 📝 | [Add COMMENT clauses to logs and traces schema columns](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48036) | collector-contrib |
 | 📝 | [Document native histogram support](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/47733) | collector-contrib |
