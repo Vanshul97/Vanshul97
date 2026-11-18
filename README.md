@@ -44,6 +44,7 @@
 | 📝 | [Clarify error_output_paths only affects zap internal errors](https://github.com/open-telemetry/opentelemetry-collector/pull/15147) | collector-core |
 | 📝 | [Clarify TLS docs: mTLS is optional, not mandatory](https://github.com/open-telemetry/opentelemetry-collector/pull/15143) | collector-core |
 | 🔧 | [Update docs to recommend declarative metadata.yaml definitions](https://github.com/open-telemetry/opentelemetry-collector/pull/15133) | collector-core |
+| 📝 | [chore: keep test and tooling packages out of runtime dependencies](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/234) | grafana-catalog |
 | 📝 | [fix: log a failed update once and ask for a missing object once](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/229) | grafana-catalog |
 | 📝 | [test: exercise the connection code through an injectable k8s client](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/225) | grafana-catalog |
 | 📝 | [chore: declare node-fetch as a devDependency](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/224) | grafana-catalog |
