@@ -117,7 +117,7 @@ CURRENTLY="OTel Collector reliability | Row-level access control | Cost-optimize
 ## `> cat /proc/contributions/snake`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Vanshul97/Vanshul97/output/github-snake-dark.svg" alt="Snake animation" />
+  <img src="https://raw.githubusercontent.com/Vanshul97/Vanshul97/output/github-snake.svg" alt="Snake animation" />
 </p>
 
 ---
