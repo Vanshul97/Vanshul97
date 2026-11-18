@@ -44,6 +44,12 @@
 | 📝 | [Clarify error_output_paths only affects zap internal errors](https://github.com/open-telemetry/opentelemetry-collector/pull/15147) | collector-core |
 | 📝 | [Clarify TLS docs: mTLS is optional, not mandatory](https://github.com/open-telemetry/opentelemetry-collector/pull/15143) | collector-core |
 | 🔧 | [Update docs to recommend declarative metadata.yaml definitions](https://github.com/open-telemetry/opentelemetry-collector/pull/15133) | collector-core |
+| 📝 | [fix: log a failed update once and ask for a missing object once](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/229) | grafana-catalog |
+| 📝 | [test: exercise the connection code through an injectable k8s client](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/225) | grafana-catalog |
+| 📝 | [chore: declare node-fetch as a devDependency](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/224) | grafana-catalog |
+| 📝 | [test: run the sync against a misbehaving ServiceModel API (#215)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/218) | grafana-catalog |
+| 📝 | [feat: make the limit on in-flight ServiceModel requests configurable (#178)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/217) | grafana-catalog |
+| 📝 | [fix: reject a GCOM response with no valid stack id (#173)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/216) | grafana-catalog |
 <!-- END_MERGED_PRS -->
 
 ---
