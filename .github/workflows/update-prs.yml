@@ -46,7 +46,7 @@ jobs:
               --json number,title --limit 50 \
               | jq -r --arg repo "$1" --arg label "$2" '
                   .[]
-                  | select(.title | test("^\\[chore\\]|^(chore|test|docs)|[Dd]ocument|[Cc]larify|README|COMMENT clauses|devDependenc") | not)
+                  | select(.title | test("^\\[chore\\]|^(chore|test|docs)|[Dd]ocument|[Cc]larify|[Uu]pdate docs|README|COMMENT clauses|devDependenc") | not)
                   | "🔧" as $icon
                   | "\(.number)\t\($icon)\t\(.title | gsub("^\\[[^\\]]*\\] "; ""))\t\($repo)\t\($label)"'
           }
