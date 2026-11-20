@@ -42,7 +42,6 @@
 | 🔧 | [feat(queryBuilder): bucket DateTime64 time columns with $__timeInterval_ms in aggregate time series](https://github.com/grafana/clickhouse-datasource/pull/2301) | clickhouse-datasource |
 | 🔧 | [fix(dashboard): resolve library panels in panel query tools](https://github.com/grafana/mcp-grafana/pull/1611) | mcp-grafana |
 | 🔧 | [fix: retry logs config schema fetch after Save & test](https://github.com/grafana/clickhouse-datasource/pull/2308) | clickhouse-datasource |
-| 🔧 | [Update docs to recommend declarative metadata.yaml definitions](https://github.com/open-telemetry/opentelemetry-collector/pull/15133) | collector-core |
 | 🔧 | [fix: log a failed update once and ask for a missing object once](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/229) | grafana-catalog |
 | 🔧 | [feat: make the limit on in-flight ServiceModel requests configurable (#178)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/217) | grafana-catalog |
 | 🔧 | [fix: reject a GCOM response with no valid stack id (#173)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/216) | grafana-catalog |
