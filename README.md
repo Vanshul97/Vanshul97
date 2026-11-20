@@ -37,20 +37,15 @@
 | 🔧 | [Clean up stale unix socket on startup](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48761) | collector-contrib |
 | 🔧 | [Fix --allow-export-failures ignored in batch mode](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48764) | collector-contrib |
 | 🔧 | [feat: report the upload queue depth and wait time](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/213) | grafana-catalog |
-| 📝 | [Drop WAL batches rejected by the endpoint when retries are enabled](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/53062) | collector-contrib |
-| 📝 | [[chore][receiver/fluentforward] Fix incorrect tag attribute key in README](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48911) | collector-contrib |
-| 📝 | [Add COMMENT clauses to logs and traces schema columns](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/48036) | collector-contrib |
-| 📝 | [Document native histogram support](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/47733) | collector-contrib |
-| 📝 | [Clarify error_output_paths only affects zap internal errors](https://github.com/open-telemetry/opentelemetry-collector/pull/15147) | collector-core |
-| 📝 | [Clarify TLS docs: mTLS is optional, not mandatory](https://github.com/open-telemetry/opentelemetry-collector/pull/15143) | collector-core |
+| 🔧 | [Drop WAL batches rejected by the endpoint when retries are enabled](https://github.com/open-telemetry/opentelemetry-collector-contrib/pull/53062) | collector-contrib |
+| 🔧 | [fix(logs): stop infinite scrolling from stalling on busy tables](https://github.com/grafana/clickhouse-datasource/pull/2297) | clickhouse-datasource |
+| 🔧 | [feat(queryBuilder): bucket DateTime64 time columns with $__timeInterval_ms in aggregate time series](https://github.com/grafana/clickhouse-datasource/pull/2301) | clickhouse-datasource |
+| 🔧 | [fix(dashboard): resolve library panels in panel query tools](https://github.com/grafana/mcp-grafana/pull/1611) | mcp-grafana |
+| 🔧 | [fix: retry logs config schema fetch after Save & test](https://github.com/grafana/clickhouse-datasource/pull/2308) | clickhouse-datasource |
 | 🔧 | [Update docs to recommend declarative metadata.yaml definitions](https://github.com/open-telemetry/opentelemetry-collector/pull/15133) | collector-core |
-| 📝 | [chore: keep test and tooling packages out of runtime dependencies](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/234) | grafana-catalog |
-| 📝 | [fix: log a failed update once and ask for a missing object once](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/229) | grafana-catalog |
-| 📝 | [test: exercise the connection code through an injectable k8s client](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/225) | grafana-catalog |
-| 📝 | [chore: declare node-fetch as a devDependency](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/224) | grafana-catalog |
-| 📝 | [test: run the sync against a misbehaving ServiceModel API (#215)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/218) | grafana-catalog |
-| 📝 | [feat: make the limit on in-flight ServiceModel requests configurable (#178)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/217) | grafana-catalog |
-| 📝 | [fix: reject a GCOM response with no valid stack id (#173)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/216) | grafana-catalog |
+| 🔧 | [fix: log a failed update once and ask for a missing object once](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/229) | grafana-catalog |
+| 🔧 | [feat: make the limit on in-flight ServiceModel requests configurable (#178)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/217) | grafana-catalog |
+| 🔧 | [fix: reject a GCOM response with no valid stack id (#173)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/216) | grafana-catalog |
 <!-- END_MERGED_PRS -->
 
 ---
