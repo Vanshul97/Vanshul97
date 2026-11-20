@@ -31,7 +31,12 @@ jobs:
           grafana/backstage-plugin-grafana-catalog#211|🔧
           open-telemetry/opentelemetry-collector-contrib#48761|🔧
           open-telemetry/opentelemetry-collector-contrib#48764|🔧
-          grafana/backstage-plugin-grafana-catalog#213|🔧'
+          grafana/backstage-plugin-grafana-catalog#213|🔧
+          open-telemetry/opentelemetry-collector-contrib#53062|🔧
+          grafana/clickhouse-datasource#2297|🔧
+          grafana/clickhouse-datasource#2301|🔧
+          grafana/mcp-grafana#1611|🔧
+          grafana/clickhouse-datasource#2308|🔧'
           # strip the YAML indentation from each PRIORITY line
           PRIORITY=$(printf '%s\n' "$PRIORITY" | sed 's/^ *//')
 
@@ -41,7 +46,8 @@ jobs:
               --json number,title --limit 50 \
               | jq -r --arg repo "$1" --arg label "$2" '
                   .[]
-                  | (if (.title | test("^\\[(pdata|fix|feat|bug)"; "i")) then "🔧" else "📝" end) as $icon
+                  | select(.title | test("^\\[chore\\]|^(chore|test|docs)|[Dd]ocument|[Cc]larify|README|COMMENT clauses|devDependenc") | not)
+                  | "🔧" as $icon
                   | "\(.number)\t\($icon)\t\(.title | gsub("^\\[[^\\]]*\\] "; ""))\t\($repo)\t\($label)"'
           }
 
@@ -67,6 +73,8 @@ jobs:
               fetch open-telemetry/opentelemetry-collector-contrib collector-contrib
               fetch open-telemetry/opentelemetry-collector          collector-core
               fetch grafana/backstage-plugin-grafana-catalog        grafana-catalog
+              fetch grafana/clickhouse-datasource                   clickhouse-datasource
+              fetch grafana/mcp-grafana                             mcp-grafana
             } | rank_rows | sort -t"$(printf '\t')" -k1,1n | cut -f2-
           } > /tmp/pr_table.md
 
