@@ -42,6 +42,11 @@
 | 🔧 | [feat(queryBuilder): bucket DateTime64 time columns with $__timeInterval_ms in aggregate time series](https://github.com/grafana/clickhouse-datasource/pull/2301) | clickhouse-datasource |
 | 🔧 | [fix(dashboard): resolve library panels in panel query tools](https://github.com/grafana/mcp-grafana/pull/1611) | mcp-grafana |
 | 🔧 | [fix: retry logs config schema fetch after Save & test](https://github.com/grafana/clickhouse-datasource/pull/2308) | clickhouse-datasource |
+| 🔧 | [fix(cloudmonitoring): start end-only discovery ranges an hour before the end](https://github.com/grafana/mcp-grafana/pull/1685) | mcp-grafana |
+| 🔧 | [fix(prometheus): reject negative limit in metric metadata listing](https://github.com/grafana/mcp-grafana/pull/1684) | mcp-grafana |
+| 🔧 | [fix(alerting): return an empty list when no datasource contact point matches](https://github.com/grafana/mcp-grafana/pull/1678) | mcp-grafana |
+| 🔧 | [fix(xray): start end-only search ranges an hour before the end](https://github.com/grafana/mcp-grafana/pull/1677) | mcp-grafana |
+| 🔧 | [fix(tempo): start end-only query ranges an hour before the end](https://github.com/grafana/mcp-grafana/pull/1675) | mcp-grafana |
 | 🔧 | [fix(time): start end-only query ranges an hour before the end](https://github.com/grafana/mcp-grafana/pull/1674) | mcp-grafana |
 | 🔧 | [fix(prometheus): reject negative limit in label name and value listing](https://github.com/grafana/mcp-grafana/pull/1673) | mcp-grafana |
 | 🔧 | [fix(dashboard): include row-nested panels in get_dashboard_summary](https://github.com/grafana/mcp-grafana/pull/1672) | mcp-grafana |
