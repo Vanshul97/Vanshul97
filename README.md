@@ -42,6 +42,8 @@
 | 🔧 | [feat(queryBuilder): bucket DateTime64 time columns with $__timeInterval_ms in aggregate time series](https://github.com/grafana/clickhouse-datasource/pull/2301) | clickhouse-datasource |
 | 🔧 | [fix(dashboard): resolve library panels in panel query tools](https://github.com/grafana/mcp-grafana/pull/1611) | mcp-grafana |
 | 🔧 | [fix: retry logs config schema fetch after Save & test](https://github.com/grafana/clickhouse-datasource/pull/2308) | clickhouse-datasource |
+| 🔧 | [fix(annotations): reject a missing id in update_annotation](https://github.com/grafana/mcp-grafana/pull/1698) | mcp-grafana |
+| 🔧 | [fix(pyroscope): reject negative max_node_depth](https://github.com/grafana/mcp-grafana/pull/1697) | mcp-grafana |
 | 🔧 | [fix(cloudmonitoring): start end-only discovery ranges an hour before the end](https://github.com/grafana/mcp-grafana/pull/1685) | mcp-grafana |
 | 🔧 | [fix(prometheus): reject negative limit in metric metadata listing](https://github.com/grafana/mcp-grafana/pull/1684) | mcp-grafana |
 | 🔧 | [fix(alerting): return an empty list when no datasource contact point matches](https://github.com/grafana/mcp-grafana/pull/1678) | mcp-grafana |
