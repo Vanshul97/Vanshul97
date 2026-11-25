@@ -42,6 +42,8 @@
 | 🔧 | [feat(queryBuilder): bucket DateTime64 time columns with $__timeInterval_ms in aggregate time series](https://github.com/grafana/clickhouse-datasource/pull/2301) | clickhouse-datasource |
 | 🔧 | [fix(dashboard): resolve library panels in panel query tools](https://github.com/grafana/mcp-grafana/pull/1611) | mcp-grafana |
 | 🔧 | [fix: retry logs config schema fetch after Save & test](https://github.com/grafana/clickhouse-datasource/pull/2308) | clickhouse-datasource |
+| 🔧 | [fix(incident): require title, severity and roomPrefix in create_incident](https://github.com/grafana/mcp-grafana/pull/1712) | mcp-grafana |
+| 🔧 | [fix(asserts): require startTime and endTime in get_assertions](https://github.com/grafana/mcp-grafana/pull/1711) | mcp-grafana |
 | 🔧 | [fix(annotations): reject a missing id in update_annotation](https://github.com/grafana/mcp-grafana/pull/1698) | mcp-grafana |
 | 🔧 | [fix(pyroscope): reject negative max_node_depth](https://github.com/grafana/mcp-grafana/pull/1697) | mcp-grafana |
 | 🔧 | [fix(cloudmonitoring): start end-only discovery ranges an hour before the end](https://github.com/grafana/mcp-grafana/pull/1685) | mcp-grafana |
@@ -52,6 +54,8 @@
 | 🔧 | [fix(time): start end-only query ranges an hour before the end](https://github.com/grafana/mcp-grafana/pull/1674) | mcp-grafana |
 | 🔧 | [fix(prometheus): reject negative limit in label name and value listing](https://github.com/grafana/mcp-grafana/pull/1673) | mcp-grafana |
 | 🔧 | [fix(dashboard): include row-nested panels in get_dashboard_summary](https://github.com/grafana/mcp-grafana/pull/1672) | mcp-grafana |
+| 🔧 | [fix: match a list field in an allow filter when any item matches](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/237) | grafana-catalog |
+| 🔧 | [fix: don't throw on entities missing a field named in an allow filter](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/236) | grafana-catalog |
 | 🔧 | [fix: log a failed update once and ask for a missing object once](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/229) | grafana-catalog |
 | 🔧 | [feat: make the limit on in-flight ServiceModel requests configurable (#178)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/217) | grafana-catalog |
 | 🔧 | [fix: reject a GCOM response with no valid stack id (#173)](https://github.com/grafana/backstage-plugin-grafana-catalog/pull/216) | grafana-catalog |
