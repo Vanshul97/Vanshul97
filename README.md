@@ -42,6 +42,8 @@
 | 🔧 | [feat(queryBuilder): bucket DateTime64 time columns with $__timeInterval_ms in aggregate time series](https://github.com/grafana/clickhouse-datasource/pull/2301) | clickhouse-datasource |
 | 🔧 | [fix(dashboard): resolve library panels in panel query tools](https://github.com/grafana/mcp-grafana/pull/1611) | mcp-grafana |
 | 🔧 | [fix: retry logs config schema fetch after Save & test](https://github.com/grafana/clickhouse-datasource/pull/2308) | clickhouse-datasource |
+| 🔧 | [fix(rendering): escape the dashboard UID in get_panel_image render URLs](https://github.com/grafana/mcp-grafana/pull/1714) | mcp-grafana |
+| 🔧 | [fix(alerting): escape the rule UID in get_alert_rule_versions requests](https://github.com/grafana/mcp-grafana/pull/1713) | mcp-grafana |
 | 🔧 | [fix(incident): require title, severity and roomPrefix in create_incident](https://github.com/grafana/mcp-grafana/pull/1712) | mcp-grafana |
 | 🔧 | [fix(asserts): require startTime and endTime in get_assertions](https://github.com/grafana/mcp-grafana/pull/1711) | mcp-grafana |
 | 🔧 | [fix(annotations): reject a missing id in update_annotation](https://github.com/grafana/mcp-grafana/pull/1698) | mcp-grafana |
